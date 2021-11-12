@@ -55,7 +55,7 @@ public class PhoneBookController {
         if(s.equals("")){
             return "redirect:/phone_book";
         }
-        model.addAttribute("phonebooks", phoneBookService.search(s));
+        model.addAttribute("phonebooks", phoneBookService.search(s,s));
         return "list";
     }
 }

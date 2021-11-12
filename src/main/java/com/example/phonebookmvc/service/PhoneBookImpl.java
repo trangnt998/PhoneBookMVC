@@ -18,8 +18,9 @@ public class PhoneBookImpl implements PhoneBookService{
     }
 
     @Override
-    public List<PhoneBook> search(String q){
-        return phoneBookRepository.findAllByNameContaining(q);
+    public List<PhoneBook> search(String name, String address){
+        return phoneBookRepository.findAllByNoteContainingOrAddressContaining(name, address);
+
     }
 
     @Override
