@@ -42,7 +42,7 @@ public class PhoneBookController {
         return "redirect:/phone_book";
     }
 
-    @DeleteMapping("/phone_book/{id}/delete")
+    @GetMapping("/phone_book/{id}/delete")
     public String delete(@PathVariable int id, RedirectAttributes redirect){
         PhoneBook phone = phoneBookService.findByID(id);
         phoneBookService.delete(phone);
